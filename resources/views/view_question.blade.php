@@ -5,7 +5,7 @@
 <div id="layoutSidenav" style="background-color: orange;">
 <div id="layoutSidenav_content">
         <main>
-                
+            
             <div class="container-fluid px-4">
             <h4 class="mt-4">Data Record</h4>
                 <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#quesModal"  style="margin-left:85.5%; margin-bottom:1em;">
@@ -20,16 +20,30 @@
                     <table id="example" class="table table-striped" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>Id</th>					
-                                    <th>Exam Title</th>									
-                                    <th>Status</th>	
+                                    <th>ID</th>					
+                                    <th>Question Title</th>									
+                                    <th>Option 1</th>	
+                                    <th>Option 2</th>	
+                                    <th>Option 3</th>	
+                                    <th>Option 4</th>	
+                                    <th>Option 5</th>	
                                     <th></th>		
                                 </tr>
                             </thead>
                             <tbody>
-                                
-                            
-                               
+                            @foreach($exam_title as $quest)
+                                    <tr>
+                                      <td>{{$quest->id}}</td>
+                                      <td>{{$quest->question}}</td>
+                                      <td>{{$quest->a}}</td>
+                                      <td>{{$quest->b}}</td>
+                                      <td>{{$quest->c}}</td>
+                                      <td>{{$quest->d}}</td>
+                                      <td>{{$quest->e}}</td>
+                                      
+                                      
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

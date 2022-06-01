@@ -16,14 +16,11 @@
                                 <div class="sb-nav-link-icon"></div>
                                 Dashboard
                             </a>
-                            <a class="nav-link" href="{{url('/time_record')}}">
+                            <a class="nav-link" href="{{url('/examenier')}}">
                                 <div class="sb-nav-link-icon"></div>
-                                Time Record
+                                Add Examenier
                             </a>
-                            <a class="nav-link" href="{{ url('')}}">
-                                <div class="sb-nav-link-icon"></div>
-                                Profile Setting
-                            </a>
+                           
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
