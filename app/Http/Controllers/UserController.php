@@ -124,7 +124,6 @@ class UserController extends Controller
 
     public function exam()
     {
-        
         $examtitle = ExamTitle::all();
     
         return view('exam', compact('examtitle'));
@@ -132,10 +131,14 @@ class UserController extends Controller
     
     public function employee_dash()
     {
-        return view('employee_dashboard');
+        return view('hr.dashboard');
     }  
     public function examier()
     {
-        return view('hr.examier');
+        $search = ExamTitle::all();
+        $user = User::all();
+        return view('hr.examier', compact('search','user'));
     } 
+
+    
 }
