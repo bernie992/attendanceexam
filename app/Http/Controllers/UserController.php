@@ -132,7 +132,7 @@ class UserController extends Controller
     
     public function employee_dash()
     {
-        return view('employee_dashboard');
+        return view('hr.dashboard');
     }  
     public function examier()
     {
