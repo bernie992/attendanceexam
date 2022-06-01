@@ -37,11 +37,14 @@ Route::get('/view_question/{id}', [UserController::class, 'view_question']);
 //time
 Route::get('time In', [UserController::class, 'update']);
 Route::get('time Out', [UserController::class, 'time_out']);
-
 Route::get('examenier', [UserController::class, 'examier']);
+//search
+Route::get('search', [UserController::class, 'search']);
 
 //Post Route
 Route::post('/addemployee', [UserController::class, 'addemployee']);
 Route::post('/create_exam', [UserController::class, 'create_exam']);
 Route::post('/create_question', [UserController::class, 'create_question']);
+
+
 

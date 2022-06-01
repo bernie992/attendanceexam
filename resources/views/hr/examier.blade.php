@@ -6,8 +6,9 @@
 <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h4 class="mt-4">Time Record</h4>
-                        
+                        <h4 class="mt-4">Create Link Exam</h4>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#linkModal"  style="margin-left:85.5%; margin-bottom:1em;">
+                <i class="fa fa-plus"></i> | Create Link </button>
                         <div class="card mb-4">
                             <div class="card-header">
                                 
@@ -49,4 +50,5 @@
 </div>
 
     <script src="js/datatables.js"></script>
+    @include('hr.modal_createlink')
 @endsection
