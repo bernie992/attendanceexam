@@ -11,6 +11,7 @@ use App\Models\Time;
 use App\Models\View;
 use App\Models\TimeOut;
 use App\Models\ExamTitle;
+use App\Models\ExamList;
 use Carbon\Carbon;
 use DB;
 
@@ -30,10 +31,7 @@ class UserController extends Controller
         return view('exam', compact('examtitle'));
     }
 
-    public function view_question()
-    {
-        return view('view_question');
-    }
+   
     // Time In Data
 
     public function time_in(Request $request)
@@ -86,7 +84,11 @@ class UserController extends Controller
 
         return redirect()->back();
     }
-
+    public function view_question()
+    {
+        $exam_title = ExamList::all();
+        return view('view_question', compact('exam_title'));
+    }
     public function create_exam(Request $request){
         
         $exam = new ExamTitle;
@@ -98,11 +100,11 @@ class UserController extends Controller
         return redirect()->back();
     }
 
-    public function create_question(Request $request, $exam_title_id){
-        $exam_title = ExamList::findorFail($list_id);
-
-        $question =new ExamList();
+    public function create_question(Request $request){
         
+       
+        $question =new ExamList();
+    
         $question->question=$request->question_title;
         $question->a=$request->option_title_1;
         $question->b=$request->option_title_2;
@@ -122,26 +124,18 @@ class UserController extends Controller
 
     public function exam()
     {
+        
         $examtitle = ExamTitle::all();
+    
         return view('exam', compact('examtitle'));
     }
+    
     public function employee_dash()
     {
         return view('employee_dashboard');
     }  
-    public function time()
+    public function examier()
     {
-    
-       
-       
-
-        $result = DB::table('users')
-        ->join('times','times.user_id','=','users.id')
-        ->join('time_outs','time_outs.time_id','=','times.id')
-        ->select('time_outs.*')
-        ->get();
-        
-        dd($result);
-       
+        return view('hr.examier');
     } 
 }

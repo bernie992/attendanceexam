@@ -30,11 +30,10 @@
                                 
                             @foreach($examtitle as $title)
                                     <tr>
-                                        <td>{{$title->id}}</td>
+                                      <td>{{$title->id}}</td>
                                       <td>{{$title->name}}</td>
                                       <td>
-                                   
-                                        <a href="{{url('/view question')}}" type="button" class="btn btn-info"><i class="fa fa-plus"></i> | Add More </a>
+                                        <a href="/view_question/{{$title->id}}" type="button" class="btn btn-info"><i class="fa fa-plus"></i> | Add More </a>
                                       </td>
                                       
                                     </tr>

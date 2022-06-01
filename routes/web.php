@@ -31,16 +31,17 @@ Route::get('users', [UserController::class, 'viewrecord']);
 Route::get('exam title', [UserController::class, 'view_title']);
 Route::get('attendance', [UserController::class, 'attendance']);
 Route::get('exam', [UserController::class, 'exam']);
-Route::get('view question', [UserController::class, 'view_question']);
+
+Route::get('/view_question/{id}', [UserController::class, 'view_question']);
 
 //time
 Route::get('time In', [UserController::class, 'update']);
 Route::get('time Out', [UserController::class, 'time_out']);
 
-Route::get('time_record', [UserController::class, 'time']);
+Route::get('examenier', [UserController::class, 'examier']);
 
 //Post Route
 Route::post('/addemployee', [UserController::class, 'addemployee']);
 Route::post('/create_exam', [UserController::class, 'create_exam']);
-Route::post('/create question', [UserController::class, 'create_question']);
+Route::post('/create_question', [UserController::class, 'create_question']);
 

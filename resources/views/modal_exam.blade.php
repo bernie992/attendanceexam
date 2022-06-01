@@ -17,8 +17,6 @@
           <label data-error="wrong" data-success="right" for="orangeForm-name">Title Exam</label>
           <input type="text" name="exname" class="form-control validate">
         </div>
-        
-
       </div>
       <div class="modal-footer d-flex justify-content-center">
         <button class="btn btn-deep-orange">Save</button>

@@ -34,7 +34,7 @@ class HomeController extends Controller
             return view('admin_dashboard');
         }
         else{
-            return view('employee_dashboard');
+            return view('hr.dashboard');
         }
     }
 

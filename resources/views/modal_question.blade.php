@@ -1,4 +1,4 @@
-<form action="{{url('/create_exam')}}" method="POST">
+<form action="{{url('create_question')}}" method="POST">
   @csrf
 <div class="modal fade" id="quesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
@@ -11,12 +11,12 @@
         </button>
       </div>
       <div class="modal-body">
-     
+	  
 	  <div class="form-group">
 							<div class="row">
 								<label class="col-md-4 text-right">Question Title <span class="text-danger">*</span></label>
 								<div class="col-md-8">
-									<input type="text" name="question_title" id="question_title" autocomplete="off" class="form-control" />
+									<input type="text" name="question_title" id="question_title"  autocomplete="off" class="form-control" />
 								</div>
 							</div>
 						</div>
@@ -79,6 +79,7 @@
 
       </div>
       <div class="modal-footer d-flex justify-content-center">
+		  <a href=""></a>
         <button class="btn btn-deep-orange">Save</button>
       </div>
     </div>
