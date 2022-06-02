@@ -7,7 +7,7 @@
 	}
     .img{
 	position: absolute;
-	height: auto;
+	height: 100%;
 	width: 100%
 }
 .card {

@@ -7,7 +7,7 @@
 	}
     .img{
 	position: absolute;
-	height: auto;
+	height: 100%;
 	width: 100%
 }
 .card {
@@ -47,12 +47,17 @@
 		background-position: 0% 50%;
 	}
 }
-
+@media screen and (max-width: 400px) {
+  .card, input[type=submit] {
+    width: 50%;
+    margin-top: 0;
+  }
+}
 </style>
 @section('content')
 
 
-<img class = "img"src="image/Color (3).gif" alt="">
+<img class = "img"src="image/Color (3).gif" alt="" width="600" height="400">
 
 <div class="container">
     <div class="row justify-content-center">

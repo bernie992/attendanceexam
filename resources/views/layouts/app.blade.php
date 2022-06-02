@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Attendance System') }}</title>
+    <title>{{ config('app.name', 'Online Examination') }}</title>
 
 
     <!-- Scripts -->
@@ -45,7 +45,7 @@
             <div class="container">
             <button style="margin-left: -110px;" class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
                 <a style="margin-left: 20px;" class="navbar-brand" href="{{ url('/') }}">
-                   Attendance System
+                   Online Examination
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
