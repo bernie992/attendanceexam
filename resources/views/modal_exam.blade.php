@@ -1,7 +1,7 @@
 <form action="{{url('/create_exam')}}" method="POST">
   @csrf
 <div class="modal fade" id="regModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true">
+  aria-hidden="true" style="margin-top: 10%;">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
@@ -11,7 +11,6 @@
         </button>
       </div>
       <div class="modal-body">
-     
         <div class="form-group">
           <i class="fas fa-user prefix grey-text"></i>
           <label data-error="wrong" data-success="right" for="orangeForm-name">Title Exam</label>
@@ -19,7 +18,7 @@
         </div>
       </div>
       <div class="modal-footer d-flex justify-content-center">
-        <button class="btn btn-deep-orange">Save</button>
+        <button class="btn btn-success">Save</button>
       </div>
     </div>
   </div>

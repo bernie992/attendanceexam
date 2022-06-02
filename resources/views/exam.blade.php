@@ -35,7 +35,6 @@
                                       <td>
                                         <a href="/view_question/{{$title->id}}" type="button" class="btn btn-info"><i class="fa fa-plus"></i> | Add More </a>
                                       </td>
-                                      
                                     </tr>
                                 @endforeach
                                
