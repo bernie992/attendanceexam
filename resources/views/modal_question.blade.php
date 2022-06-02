@@ -1,7 +1,7 @@
 <form action="{{url('create_question')}}" method="POST">
   @csrf
 <div class="modal fade" id="quesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true">
+  aria-hidden="true" style="margin-top: 5%;">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
