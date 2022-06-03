@@ -45,6 +45,11 @@ Route::get('search', [UserController::class, 'search']);
 Route::post('/addemployee', [UserController::class, 'addemployee']);
 Route::post('/create_exam', [UserController::class, 'create_exam']);
 Route::post('/create_question', [UserController::class, 'create_question']);
+Route::post('/create link', [UserController:: class, 'createlink']);
+Route::post('/add application', [UserController::class, 'application']);
+
+//////
+Route::get('/landing', [UserController::class, 'landing']);
 
 
 

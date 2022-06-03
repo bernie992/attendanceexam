@@ -1,4 +1,4 @@
-<form action="{{url('/')}}" method="POST">
+<form action="{{url('/create link')}}" method="POST">
   @csrf
 <div class="modal fade" id="linkModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
@@ -15,18 +15,18 @@
         <div class="form-group">
           <i class="fas fa-user prefix grey-text"></i>
           <label data-error="wrong" data-success="right" for="orangeForm-name">Search the Program for Exam. </label>
-          <select name="">
+          <select name="titlequest">
             @foreach($search as $row)
-                <option value="{{$row->id}}">{{$row->name}}</option>
+                <option value="{{$row->name}}">{{$row->name}}</option>
             @endforeach
             </select>
         </div>
         <div class="form-group">
           <i class="fas fa-user prefix grey-text"></i>
           <label data-error="wrong" data-success="right" for="orangeForm-name">Add Examinee's </label>
-          <select name="">
-            @foreach($user as $urow)
-                <option value="{{$urow->id}}">{{$urow->name}}</option>
+          <select name="userap">
+            @foreach($app as $urow)
+                <option value="{{$urow->fullname}}">{{$urow->fullname}}</option>
             @endforeach
             </select>
         </div>

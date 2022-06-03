@@ -12,6 +12,8 @@ use App\Models\View;
 use App\Models\TimeOut;
 use App\Models\ExamTitle;
 use App\Models\ExamList;
+use App\Models\Link;
+use App\Models\Applicant;
 use Carbon\Carbon;
 use DB;
 
@@ -131,14 +133,51 @@ class UserController extends Controller
     
     public function employee_dash()
     {
-        return view('hr.dashboard');
+        $applicant = Applicant::all();
+
+        return view('hr.dashboard', compact('applicant'));
     }  
+
     public function examier()
     {
         $search = ExamTitle::all();
-        $user = User::all();
-        return view('hr.examier', compact('search','user'));
+        $app = Applicant::all();
+        $link = Link::all();
+      
+        return view('hr.examier', compact('search','app','link'));
     } 
 
+    public function createlink(Request $request)
+    {
     
+
+        $link = new Link();
+
+        $link -> examtitle = $request -> titlequest;
+        $link -> applicant = $request -> userap;
+
+        $link -> save();
+       
+        return redirect()->back();
+    } 
+
+    public function landing()
+    {
+        return view('landingpage');
+    }
+
+    public function application(Request $request)
+    {
+        $app = new Applicant();
+
+        $app -> fullname = $request->fullname;
+        $app -> age = $request->age;
+        $app -> address = $request->address;
+        $app -> number = $request->contact;
+        $app -> email = $request->email;
+
+        $app -> save();
+
+        return redirect()->back();
+    }
 }
