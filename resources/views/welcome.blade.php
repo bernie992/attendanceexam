@@ -41,7 +41,7 @@
             .container{
                 position: absolute;
                  top: 20%;
-                 left: 10%;
+                 left: 17%;
                  font-family: "Tangerine", serif;
                  text-shadow: 4px 4px 4px #aaa;
                 display: flex;
@@ -49,18 +49,25 @@
                 font-size: 3em;
         
             }
+            .apply{
+                position:absolute;  position: absolute;
+                top: 5%;
+                left: 85%;
+                transform: translate(-60%, -40%);
+                color: white;
+            }
            
         </style>
     </head>
-   
-    <body style="position:absolute;">       
+    <body style="position:absolute;">
         <div class="landing">
             <img class = "img"src="image/Graph.jpg" alt="">
             <div class="container">
-            <h1>ONLINE EXAMINATION</h1>
-        </div>
+              <h1>coreDev Sulotion Inc.</h1>
+            </div>
             <button> <a class = "log " href="{{ route('login') }}"><h3>Login</h3></a></button>
             <button> <a class = "reg " href="{{ route('register') }}"><h3>Register</h3></a></button>
+            <button> <a class="apply" href="{{ route('job/joblist') }}"><h3 class="btn btn-link">Apply Job</h3></a></button>
         </div>
     </body>
 </html> 
