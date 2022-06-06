@@ -19,14 +19,19 @@
                             <table id="example" class="table table-striped" style="width:100%">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Time In</th>
-                                            <th>Time Out</th>
+                                            <th>Questionnaire</th>
+                                            <th>Applicant Name</th>
+                                            <th>Link</th>
+                                            
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
+                                    @foreach($link as $linklist)
+                                        <tr>
+                                            <td>{{$linklist->examtitle}}</td>
+                                            <td>{{$linklist->applicant}}</td>
+                                        </tr>
+                                    @endforeach
                                     
                                     </tbody>
                                 </table>

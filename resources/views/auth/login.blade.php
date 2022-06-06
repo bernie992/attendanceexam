@@ -38,11 +38,9 @@
     .img{
 	position: absolute;
 	height: 100%;
-<<<<<<< HEAD
-	width: 100%
-=======
+
     width: 100%
->>>>>>> 8afe350c4e1ee86b912a6c803f6ff948a31e0dfe
+
 }
 .card {
     position: relative;
@@ -86,16 +84,14 @@
   }
 }
 </style>
-<<<<<<< HEAD
-@section('content')
 
 
 <img class = "img"src="image/Color (3).gif" alt="" width="600" height="400">
-=======
+
 </head>
 <body>
 <img class = "img"src="image/Color (3).gif" alt="">
->>>>>>> 8afe350c4e1ee86b912a6c803f6ff948a31e0dfe
+
 
 <div class="container">
     <div class="row justify-content-center">
