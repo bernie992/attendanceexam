@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
+use App\Models\Applicant;
 
 class HomeController extends Controller
 {
@@ -34,7 +35,8 @@ class HomeController extends Controller
             return view('admin_dashboard');
         }
         else{
-            return view('hr.dashboard');
+            $applicant = Applicant::all();
+            return view('hr.dashboard', compact('applicant'));
         }
     }
 
