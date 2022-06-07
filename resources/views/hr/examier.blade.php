@@ -14,27 +14,25 @@
                                 
                                 Time Record
                             </div>
-                            <div class="card-body">
-                                
+                            <div class="card-body">    
                             <table id="example" class="table table-striped" style="width:100%">
-                                    <thead>
-                                        <tr>
-                                            <th>Questionnaire</th>
-                                            <th>Applicant Name</th>
-                                            <th>Link</th>
-                                            
-                                        </tr>
-                                    </thead>
-                                    <tbody>
+                                <thead>
+                                    <tr>
+                                        <th>Questionnaire</th>
+                                        <th>Applicant Name</th>
+                                        <th>Link</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
                                     @foreach($link as $linklist)
                                         <tr>
                                             <td>{{$linklist->examtitle}}</td>
                                             <td>{{$linklist->applicant}}</td>
                                         </tr>
                                     @endforeach
-                                    
-                                    </tbody>
-                                </table>
+                                </tbody>
+                            </table>
                             </div>
                         </div>
                     </div>

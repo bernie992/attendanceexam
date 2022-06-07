@@ -1,4 +1,4 @@
-@extends('layouts.app')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/select/1.3.4/css/select.bootstrap5.min.css">
     <title>Document</title>
-<style>
+    <style>
     	body{ 
 		background: #98ff98;
         font-size: 120%;
@@ -38,23 +38,22 @@
     .img{
 	position: absolute;
 	height: 100%;
-	width: 100%
+    width: 100%
+
 }
 .card {
     position: relative;
     background: transparent;
-    animation: gradient 10s ease infinite;
-    background-size: 400% 400%;
-    top: 10%;
-    margin-left: 43%;
-    display: flex;
-    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.4);
+    animation: gradient 15s ease infinite;
+    top: 6%;
+    margin-left: 45%;
     height: 100%;
-   
     background-clip: border-box;
-    border: 1px solid rgba(5, 5, 5, 5.125);
-    border-radius: 0.25rem;
-}
+    box-shadow: 0 5px 5px 5px #888;
+    border-radius: 1rem;
+    filter: blur(-1px);
+    }
     .card-header{
 	background: transparent;
 	background-size: 400% 400%;
@@ -63,9 +62,8 @@
 	height: 8vh;
     text-align: center;
      font-family: italic;
-  
-    
 }
+
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -76,8 +74,15 @@
 	100% {
 		background-position: 0% 50%;
 	}
+
 }
 
+@media screen and (max-width: 400px) {
+  .card, input[type=submit] {
+    width: 50%;
+    margin-top: 0;
+  }
+}
 </style>
 </head>
 <body>
@@ -148,9 +153,8 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
-                                <center><h6 style="color:aqua;">If you have account click to<a href="{{ route('login') }}"><span></span> Login</a></h6></center>
                             </div>
-                            
+                            <center><h6 style="color:aqua;">If you have account click to<a href="{{ route('login') }}"><span></span> Login</a></h6></center>
                         </div>
                     </form>
                 </div>
