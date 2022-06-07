@@ -38,24 +38,22 @@
     .img{
 	position: absolute;
 	height: 100%;
-
     width: 100%
 
 }
 .card {
     position: relative;
     background: transparent;
+    background-color: rgba(0, 0, 0, 0.4);
     animation: gradient 15s ease infinite;
-    background-size: 400% 400%;
-    top: 13%;
+    top: 15%;
     margin-left: 45%;
-    display: flex;
-    flex-direction: column;
     height: 100%;
     background-clip: border-box;
-    border: 1px solid rgba(4, 4, 4, 4.125);
+    box-shadow: 0 5px 5px 5px #888;
     border-radius: 1rem;
-}
+    filter: blur(-1px);
+    }
     .card-header{
 	background: transparent;
 	background-size: 400% 400%;
@@ -76,7 +74,9 @@
 	100% {
 		background-position: 0% 50%;
 	}
+
 }
+
 @media screen and (max-width: 400px) {
   .card, input[type=submit] {
     width: 50%;
@@ -85,17 +85,12 @@
 }
 </style>
 
-
-<img class = "img"src="image/Color (3).gif" alt="" width="600" height="400">
-
 </head>
 <body>
 <img class = "img"src="image/Color (3).gif" alt="">
-
-
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-10" >
+        <div class="col-md-13" >
             <div class="card">
                 <div class="card-header">{{ __('LOGIN') }}</div>
 
@@ -152,9 +147,8 @@
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
-                            </div>
-                            <center><h6 style="color:aqua;">If you dont have account click to<a class="btn btn-link text-coral" href="{{ route('register') }}"> Register</a></h6></center>
-                        </div>
+                            </div><br>
+                            <center><h6 style="color:white;">If you dont have account click to<a href="{{ route('register') }}"> Register</a></h6></center>
                     </form>
                 </div>
             </div>
