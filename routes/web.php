@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\JobController;
+use App\Http\Controllers\ApplicantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,3 +55,7 @@ Route::get('/landing', [UserController::class, 'landing']);
 /////job route
 Route::get('joblist', [App\Http\Controllers\JobController::class, 'jobList'])->name('job/joblist');
 Route::get('jobview', [App\Http\Controllers\JobController::class, 'jobView'])->name('job/jobview');
+
+/////jobseekers
+Route::get('examinee', [App\Http\Controllers\ApplicantController::class, 'examinee']);
+Route::get('applicant', [App\Http\Controllers\ApplicantController::class, 'seek' ]);
